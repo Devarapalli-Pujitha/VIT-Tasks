@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Navigation Bar</title>
+        <style>
+            .vertical-nav{
+                display: block;
+                position: fixed;
+                background-color: aqua;
+                margin-bottom: 5px;
+                color: blue;
+                width: 100px;
+                margin-left: 20px;
+                margin-top: 50px;
+            }
+            .back-hov{
+                padding: 4px 0px 4px 2px;
+            }
+            .back-hov:hover{
+                background-color: orange;
+                color: white;
+            }
+            .horizontal-nav{
+                margin-top: 50px;
+                margin-left: 300px;
+                width: 500px;
+                text-align: center;
+                background-color: rgb(196, 194, 194);
+                color: blue;
+                position: fixed;
+            }
+            tr{
+                display: flex;
+                flex-direction: row;
+            }
+            td{
+                width: 100px;
+                border-right: 1px solid blue;
+                padding: 3px 6px;
+            }
+            td:hover{
+                color: white;
+                background-color: rgb(142, 139, 139);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="vertical-nav">
+            <div class="back-hov">Home</div>
+            <div class="back-hov">Java</div>
+            <div class="back-hov">HTML</div>
+            <div class="back-hov">CSS</div>
+            <div class="back-hov">BootStrap</div>
+        </div>
+        <div class="horizontal-nav">
+            <table>
+                <tr>
+                    <td>Home</td>
+                    <td>Java</td>
+                    <td>HTML</td>
+                    <td>CSS</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

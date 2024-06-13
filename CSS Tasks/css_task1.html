@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Shapes</title>
+        <style>
+            .boxes{
+                background-color: aqua;
+                display: grid;
+                grid-template-rows: auto auto auto auto;
+            }
+            .heading,.firstrow,.secrow,.thirdrow{             
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .padd{
+                padding: 2px 20px;
+                border: 1px solid black;
+                border-radius: 5px;
+                width: 200px;
+            }
+            .thircol{
+                padding: 2px 10px;
+                border: 1px solid black;
+                border-radius: 5px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="boxes">
+            <div class="heading">
+                <p class="padd">Firstname</p>
+                <p class="padd">Lastname</p>
+                <p class="thircol">Age</p>
+            </div>
+            <div class="firstrow">
+                <p class="padd">Jill</p>
+                <p class="padd">Smith</p>
+                <p class="thircol">50</p>
+            </div>
+            <div class="secrow">
+                <p class="padd">Eve</p>
+                <p class="padd">Jackson</p>
+                <p class="thircol">94</p>
+            </div>
+            <div class="thirdrow">
+                <p class="padd">John</p>
+                <p class="padd">Doe</p>
+                <p class="thircol">80</p>
+            </div>
+        </div>
+    </body>
+</html>

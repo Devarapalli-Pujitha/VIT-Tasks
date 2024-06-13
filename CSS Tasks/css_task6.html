@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Log-in</title>
+        <style>
+            .format{
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .image{
+                border-radius: 100%;
+                width: 300px;
+                margin-bottom: 20px;
+                border: 1px solid black;
+            }
+            label{
+                display: inline-block;
+                font-weight: bold;
+                font-size: large;
+                margin-bottom: 9px;
+            }
+            input{
+                margin-bottom: 9px;
+            }
+            .credientials{
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+            }
+            button{
+                margin-bottom: 9px;
+            }
+            .box{
+                background-color: rgb(237, 236, 236);
+                padding-top: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .login_but{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background-color: green;
+                color: white;
+                border:1px solid green;
+            }
+            .cancel_but{
+                padding: 4px 5px;
+                background-color: red;
+                border-radius: 5px;
+                border: 1px solid red;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="format">
+            <img class="image" src="https://img.freepik.com/premium-photo/attractive-young-college-girl-with-white-uniform-ai-generative_952301-1462.jpg?w=360" alt="image of a candidate"/><br>
+            <div class="credientials">
+                <label for="uname">Username</label>
+                <input type="text" placeholder="Enter Username" id="uname" name="uname"/>
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter Password" id="password" name="password"/>
+                <button class="login_but">Login</button>
+                <div>
+                    <input type="checkbox" id="rme" name="rme"/>
+                    <label for="rme">Remember me</label>
+                </div>
+                <div class="box">
+                    <button class="cancel_but">Cancel</button>
+                    <p>Forgot <a href="" target="_blank">password?</a></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
