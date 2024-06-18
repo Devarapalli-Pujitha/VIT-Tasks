@@ -1,54 +1,82 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tables</title>
+        <style>
+            table{
+                margin: 50px auto 0px auto;
+                border-collapse: collapse;
+                width: 700px;
+            }
+            .details:nth-child(even){
+                background-color: rgb(209, 209, 209);
+            }
+            .details:nth-child(odd){
+                background-color: white;
+            }
+            .lg{
+                padding: 2px 0px 2px 2px;
+                width: 250px;
+            }
+            .sm{
+                padding: 2px 0px 2px 2px;
+                width: 190px;
+            }
+            .heading{
+                background-color: green;
+                color: white;
+                padding: 5px 0px 3px 2px;
+            }
+        </style>
     </head>
     <body>
         <table>
-            <tr>
-                <th>Company</th>
-                <th>Contact</th>
-                <th>Country</th>
+            <tr class="heading">
+                <th class="lg">Company</th>
+                <th class="lg">Contact</th>
+                <th class="sm">Country</th>
             </tr>
-            <tr>
-                <td>Alfreds Futterkiste</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
+            <tr class="details">
+                <td class="lg">Alfreds Futterkiste</td>
+                <td class="lg">Maria Anders</td>
+                <td class="sm">Germany</td>
             </tr>
-            <tr>
-                <td>Berglunds snabbkop</td>
-                <td>Christina Berglund</td>
-                <td>Sweden</td>
+            <tr class="details">
+                <td class="lg">Berglunds snabbkop</td>
+                <td class="lg">Christina Berglund</td>
+                <td class="sm">Sweden</td>
             </tr>
-            <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
-                <td>Mexico</td>
+            <tr class="details">
+                <td class="lg">Centro comercial Moctezuma</td>
+                <td class="lg">Francisco Chang</td>
+                <td class="sm">Mexico</td>
             </tr>
-            <tr>
-                <td>Ernst Handel</td>
-                <td>Roland Mendel</td>
-                <td>Austria</td>
+            <tr class="details">
+                <td class="lg">Ernst Handel</td>
+                <td class="lg">Roland Mendel</td>
+                <td class="sm">Austria</td>
             </tr>
-            <tr>
-                <td>Island Trading</td>
-                <td>Helen Bennett</td>
-                <td>UK</td>
+            <tr class="details">
+                <td class="lg">Island Trading</td>
+                <td class="lg">Helen Bennett</td>
+                <td class="sm">UK</td>
             </tr>
-            <tr>
-                <td>Koniglich Essen</td>
-                <td>Philip Cramer</td>
-                <td>Germany</td>
+            <tr class="details">
+                <td class="lg">Koniglich Essen</td>
+                <td class="lg">Philip Cramer</td>
+                <td class="sm">Germany</td>
             </tr>
-            <tr>
-                <td>Laughing Bacchus Winecellars</td>
-                <td>Yoshi Tannamuri</td>
-                <td>Canada</td>
+            <tr class="details">
+                <td class="lg">Laughing Bacchus Winecellars</td>
+                <td class="lg">Yoshi Tannamuri</td>
+                <td class="sm">Canada</td>
             </tr>
-            <tr>
-                <td>Magazzini Alimentari Riuniti</td>
-                <td>Giovanni Rovelli</td>
-                <td>Italy</td>
+            <tr class="details">
+                <td class="lg">Magazzini Alimentari Riuniti</td>
+                <td class="lg">Giovanni Rovelli</td>
+                <td class="sm">Italy</td>
             </tr>
         </table>
     </body>
