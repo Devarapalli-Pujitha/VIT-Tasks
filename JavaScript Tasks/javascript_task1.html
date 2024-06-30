@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 /">
+        <title>JavaScript Task 1</title>
+    </head>
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <td><h4>Enter any number:</h4></td>
+                    <td><input type="text" onkeyup="reversedNumber()" id="inputNumber" placeholder="Enter number"></td>
+                </tr>
+                <tr>
+                    <td><h4>Reversed Number:</h4></td>
+                    <td><p id="output"></p></td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            function reversedNumber(){
+                let x = document.getElementById("inputNumber").value;
+                if(isNaN(x)){
+                    document.getElementById("output").innerHTML = "Enter numbers only";
+                    return false;
+                }
+                else{
+                    const reversednum = String(x).split("").reverse().join(""); 
+                    document.getElementById("output").textContent =  reversednum;
+                    return true;
+                }
+                //const reversednum = String(x).split("").reverse().join(""); 
+                //document.getElementById("output").textContent =  reversednum;
+            }
+        </script>
+    </body>
+</html>

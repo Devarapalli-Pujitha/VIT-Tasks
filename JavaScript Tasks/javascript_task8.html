@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 /">
+        <title>JavaScript Task 8</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous">
+        <style>
+            table{
+                margin-left: auto;
+                margin-right: auto;            
+            }
+            tr,td{
+                padding: 6px;
+            }
+            .bcol{
+                background-image: linear-gradient(white,lightgreen);
+            }
+            .str{
+                display: flex;
+                flex-direction: row;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="mt-5 bcol">
+                <h2 class="text-center text-primary mb-3">Registration Form</h2>
+                <form name="f1" action="#" onsubmit="return validate()">
+                    <table>
+                        <tr>
+                            <td><label for="fname">First Name</label></td>
+                            <td class="str"><input type="text" id="fname" name="fname" size="50"><span id="nameloc"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lname">Last Name</label></td>
+                            <td class="str"><input type="text" id="lname" name="lname" size="50"><span id="nameloc1"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td class="str"><input type="text" id="email" name="email" size="50"><span id="emailloc"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pword">Password</label></td>
+                            <td class="str"><input type="password" id="pword" name="pword" size="50"><span id="passwordloc"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="re-pword">Re-enter Password</label></td>
+                            <td class="str"><input type="password" id="re-pword" name="re-pword" size="50"><span id="passwordloc1"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="gender">Gender</label></td>
+                            <td><input type="radio" name="gender" id="male"><label for="male">Male</label>
+                                <br><input type="radio" name="gender" id="female"><label for="female">Female</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="age">Age</label></td>
+                            <td class="str"><input type="text" id="age" name="age" size="50"><span id="ageloc"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="pnum">Phone Number</label></td>
+                            <td class="str"><input type="text" id="pnum" name="pnum" size="50"><span id="phonenumloc"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="add">Address</label></td>
+                            <td class="str"><input type="text" id="add" name="add" size="44" class="p-4"><span id="addressloc"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="state">State</label></td>
+                            <td class="str"><input type="text" id="state" name="state" size="50"><span id="stateloc"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="country">Country</label></td>
+                            <td>
+                                <select id="country" name="country" size="1">
+                                    <option value="start">Choose your country</option>
+                                    <option value="India">India</option>
+                                    <option value="London">London</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="mt-2">
+                            <td><label for="language">Languages Known</label></td>
+                            <td>
+                                <input type="checkbox" id="eng" name="eng" value="eng"><label for="eng">English</label>
+                                <input type="checkbox" id="kan" name="kan" value="kan"><label for="kan">Kannada</label>
+                                <input type="checkbox" id="hin" name="hin" value="hin"><label for="hin">Hindi</label>
+                                <input type="checkbox" id="tel" name="tel" value="tel"><label for="tel">Telugu</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="text-center mt-2">
+                        <input type="checkbox" id="check" name="check" value="declare"><label for="check">Hereby I declare all the given details are true</label>
+                        <p class="text-center mt-2 mb-2">Log in to <a href="#">Ethnus</a> website</p>
+                        <button class="btn btn-primary bg-danger border border-3 border-dark text-white rounded mt-2">REGISTER</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            function validate(){
+                var name = document.f1.fname.value;
+                var name1 = document.f1.lname.value;
+                var email = document.f1.email.value;
+                var password = document.f1.pword.value;
+                var password1 = document.f1.re-pword.value;
+                var age = document.f1.age.value;
+                var phonenum = document.f1.pnum.value;
+                var address = document.f1.add.value;
+                var state = document.f1.state.value;
+                var status = false;
+                if(name.length<1){
+                    var x = document.getElementById("nameloc");
+                    x.style.color = "red";
+                    x.innerHTML = "POOR";
+                    status=false;
+                }
+                else{status=true;}
+                if(name1.length<1){
+                    var x1 = document.getElementById("nameloc1");
+                    x1.style.color = "red";
+                    x1.innerHTML = "POOR";
+                    status=false;
+                }
+                else{status=true;}
+                if(email.length<1){
+                    var x2 = document.getElementById("emailloc");
+                    x2.style.color = "red";
+                    x2.innerHTML = "POOR";
+                    status=false;
+                }
+                else{status=true;}
+                if(password.length<5){
+                    var x3 = document.getElementById("passwordloc");
+                    x3.style.color = "red";
+                    x3.innerHTML = "POOR";
+                    status=false;
+                }
+                else{status=true;}
+                if(password1 != password){
+                    var x4 = document.getElementById("passwordloc1");
+                    x4.style.color = "red";
+                    x4.innerHTML = "POOR OR MISMATCH";
+                    status=false;
+                }
+                else{status=true;}
+                if(age.length<1){
+                    var x5 = document.getElementById("ageloc");
+                    x5.style.color = "red";
+                    x5.innerHTML = "POOR";
+                    status=false;
+                }
+                else{status=true;}
+                if(phonenum<1){
+                    var x6 = document.getElementById("phonenumloc");
+                    x6.style.color = "red";
+                    x6.innerHTML = "POOR";
+                    status=false;
+                }
+                else{status=true;}
+                if(address<1){
+                    var x7 = document.getElementById("addressloc");
+                    x7.style.color = "red";
+                    x7.innerHTML = "POOR";
+                    status=false;
+                }
+                else{status=true;}
+                if(state.length<1){
+                    var x8 = document.getElementById("stateloc");
+                    x8.style.color = "red";
+                    x8.innerHTML = "POOR";
+                    status=false;
+                }
+                else{status=true;}
+                return status;
+            }
+        </script>
+    </body>
+</html>

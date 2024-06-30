@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 /">
+        <title>JavaScript Task 4</title>
+    </head>
+    <body>
+        <button onclick="date()">show date</button>
+        <p id="now-date"> </p>
+        <button onclick="time()">show time</button>
+        <p id="now-time"> </p>
+        <script>
+            function date(){
+                const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                let d = new Date();
+                let date = document.getElementById("now-date").innerHTML = d.getDate()+ "/" +month[d.getMonth()] + "/" +d.getFullYear();
+            }
+            function time(){
+                document.getElementById("now-time").innerHTML = new Date();
+            }
+        </script>
+    </body>
+</html>

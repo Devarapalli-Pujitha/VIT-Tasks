@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Task 6</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            }
+            .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+            }
+            .login-container h1 {
+            font-family: "Lobster", cursive;
+            font-size: 36px;
+            margin-bottom: 20px;
+            }
+            .input-group {
+            position: relative;
+            margin-bottom: 15px;
+            }
+            .input-group .icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #999;
+            }
+            .input-group input {
+            width: 85%;
+            padding: 10px 10px 10px 40px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            }
+            .input-group input.error {
+            border-color: red;
+            }
+            button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3897f0;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            }
+            .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+            }
+            .options a {
+            color: #3897f0;
+            text-decoration: none;
+            }
+            .signup {
+            margin-top: 20px;
+            }
+            .signup a {
+            color: #3897f0;
+            text-decoration: none;
+            }
+            .error-message {
+            color: red;
+            display: none;
+            }
+        </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <form id="loginForm">
+        <h1>Instagram</h1>
+        <div class="input-group">
+          <span class="icon">&#128100;</span>
+          <input type="text" id="username" placeholder="Username" />
+        </div>
+        <div class="input-group">
+          <span class="icon">&#128274;</span>
+          <input type="password" id="password" placeholder="Password" />
+        </div>
+        <button type="submit">Log in</button>
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+        <div class="signup">
+          Don't have an account? <a href="#">Sign up here.</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          let isValid = true;
+
+          const username = document.getElementById("username");
+          if (username.value.trim() === "") {
+            username.classList.add("error");
+            isValid = false;
+          } else {
+            username.classList.remove("error");
+          }
+
+          const password = document.getElementById("password");
+          if (password.value.trim() === "") {
+            password.classList.add("error");
+            isValid = false;
+          } else {
+            password.classList.remove("error");
+          }
+
+          if (isValid) {
+            alert("Login successful!");
+            document.getElementById("loginForm").submit();
+          }
+        });
+    </script>
+  </body>
+</html>
